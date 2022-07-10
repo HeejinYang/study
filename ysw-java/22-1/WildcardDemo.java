@@ -4,6 +4,7 @@ public class WildcardDemo {
 	//와일드 카드를 이용한 메소드, 와일드카드의 상한제한, 하한제한 이용
 	public static void addBox(Box<? extends Integer> box1, Box<? extends Integer> box2, Box<? super Integer> result) {
 		result.set(box1.get()+box2.get());
+		
 	}
 	
 	
@@ -11,6 +12,9 @@ public class WildcardDemo {
 //	public static void addBox(Box<? extends Number> box1, Box<? extends Number> box2, Box<? super Integer> result) {
 //		result.set(box1.get()+box2.get());
 //	}
+	//220710 추가
+	//애초에 Integer를 넣기위한 박스에 상한제한을 걸어서 저장을 못하게 만들기 위한것이라 Number로 할 이유가 없어서 그런건가?
+	//Number로 하면 이론상 set이 가능해져서 상한제한 할 필요가 없어지기 때문인가  ?????..?? 더 공부하고 와야겠다.
 	
 	
 	
@@ -33,8 +37,8 @@ public class WildcardDemo {
 
 class Box<T>{
 	private T ob;
-	public void set(T o){
-		ob = o;
+	public void set(T i){
+		ob = i;
 	}
 	public T get() {
 		return ob;
