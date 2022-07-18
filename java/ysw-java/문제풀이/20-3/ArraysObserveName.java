@@ -66,7 +66,12 @@ class Person implements Comparable{
 	//정렬할때 순서 어떻게해야되는지, 탐색할때는 0이 나오게 어떻게 반환해야하는지 고민했는데
 	//그냥 String의 compareTo를 호출하면 되는거였다..
 	
-	//이름으로 탐색하기
+	//이름 탐색 하기위한 string의 compareTo 메소드는 사전순서로 내용비교해서 음,양,0 반환한다
+	//당연히 정렬도 가능
+	//앞서면 양수, 뒤서면 음서면 음수, 같으면 0 반환
+
+
+	//이름으로 탐색하기(정렬하기)
 	@Override
 	public int compareTo(Object o) {
 		Person p = (Person)o;

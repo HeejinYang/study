@@ -53,9 +53,8 @@ class Person implements Comparable{
 	
 
 	//나이에 따라 정렬하고 탐색에도 사용된다. 
-	//반환값이 0일때 탐색 성공.
-	//이진탐색 전 정렬해야하는데 정렬기준은 탐색할땐 중요하지 않은것같다. 같을때 return 값이 0이기만 하면 탐색은 상관없는것같다.
-	@Override
+	//반환값이 0일때 탐색 성공.	
+		@Override
 	public int compareTo(Object o) {
 		Person p = (Person)o;
 		//호출한 녀석이 크면 양수 반환, 인스턴스의 변수중 나이순으로 정렬하기 위한 메소드
